@@ -1,0 +1,24 @@
+each item in portfolio
+	// Card
+	- let link = item.custom_fields.link[0];
+	- let image = item.thumbnail_images.full.url;
+	- let text = item.content;
+	- let sublink = item.custom_fields.sublink[0];
+	.col-md-4.top-buffer
+		.card(data-aos='fade-up')
+			// Card image
+			.view.overlay.hm-white-slight
+				img.img-fluid(src= image, alt= 'Image of ' + item.title)
+				a(target='_blank', href= link)
+					.mask.waves-effect.waves-light
+			.card-block
+				// Title
+				h4.card-title.text-center #{item.title}
+				p.card-text !{text}
+				a.btn.btn-block.btn-secondary(target='_blank', href= link)
+					i.mdi.mdi-eye
+					| Take a Look
+				a.btn.btn-block.btn-secondary(target='_blank', href= sublink)
+					i.mdi.mdi-github-circle
+					| View Repository
+	

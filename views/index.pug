@@ -1,0 +1,253 @@
+doctype html
+html(lang='en')
+	head
+		include ./partials/head
+	body
+		// Start of Body
+		// SECTION A: LETTERHEAD
+		section#letterhead.container.showcase.col-md-12.waypoint
+			nav.navbar.navbar-toggleable-sm.navbar-dark
+				.container
+					button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarNav1', aria-controls='navbarNav1', aria-expanded='false', aria-label='Toggle navigation')
+						span.navbar-toggler-icon
+					// NAV ITEMS
+					#navbarNav1.collapse.navbar-collapse
+						ul.navbar-nav.nav-justified.mr-auto
+							li.nav-item
+								a.nav-link(data-scroll='', href='#about-me')
+									span.sliding-middle-out About
+							li.nav-item
+								a.nav-link(data-scroll='', href='#skills')
+									span.sliding-middle-out Skills
+							li.nav-item
+								a.nav-link(data-scroll='', href='#portfolio')
+									span.sliding-middle-out Portfolio
+							li.nav-item
+								a.nav-link(href='#blog')
+									span.sliding-middle-out Blog
+			.row
+				.container-fluid.bottom-buffer.col-md-12
+					.row
+						.span6(style='float: none; margin: 0 auto;')
+							img.img-fluid(src='img/logo-ani.gif', alt='Logo - Animated')
+					.container.text-center.col-md-6(class='#canvas-overlay')
+						h2
+							span Hi!
+							|  My name is 
+							span Yamen
+							|  and I specialize in crafting modern, crisp and clean websites
+		// END SECTION A
+		// SECTION B: ABOUT ME
+		section#about-me.section-b.col-md-12.waypoint
+			.container
+				.row
+					.col-md-4.top-buffer(data-aos='zoom-in')
+						.person-info
+							h3.text-center.about-subtitle Personal Information
+							h5
+								span.highlight Name:
+								|  Yamen Sharaf
+							h5
+								span Age:
+								|  27 Years
+							h5
+								span Phone:
+								|  +20-1111-046486
+							h5
+								span Email:
+								|  yamensharaf@gmail.com
+							h5
+								span Address:
+								|  Cairo, Egypt
+						a.btn.btn-block.btn-secondary(href='files/Resume.pdf')
+							i.mdi.mdi-file-document
+							span(style='margin-left: 6px') Download  Résumé
+					.col-md-4.top-buffer
+						.person-img.mask.waves-effect.waves-light.img-responsive.color-overlay.wow.fadeIn(data-aos='fade-up')
+							img.z-depth-1.img-responsive(src='img/yamen.jpg', alt="Yamen's picture")
+					.col-md-4.top-buffer.bottom-buffer
+						.person-about(data-aos='zoom-in')
+							h3.about-subtitle.text-center My Story
+							p.subtext
+								| A communication engineer gone wild. A coder in the making. A dreamer when all else fails.
+							p
+								| Once a geek, always a geek. Ever since I was 12 I've been fond of everything technology. I've witnessed the web at its worse and vowed to make it better, well not really, but the thought crossed my mind.
+							button.btn.btn-block.btn-secondary(type='button', data-toggle='modal', data-target='#myModal')
+								i.mdi.mdi-briefcase-check
+								span(style='margin-left: 6px') Hire Me
+		
+		include ./partials/skills
+		// SECTION D
+		section#portfolio.section-d.col-md-12.waypoint
+			.container
+				.row.bottom-buffer
+					#portfolioHeader.top-buffer.text-center.skill-header.col-md-12
+						h2  Portfolio 
+					#portfolioDiv.row.bottom-buffer
+						include ./partials/portfolio
+						.top-buffer.skill-header.col-md-12
+							.card.z-depth-2(data-aos='fade-up')
+								.card-block
+									.row
+										p.col-md-8(style='margin-top: 10px')
+											| If you're associated with a charitable organization or any non-profit I'll build you a website for free. If you're not you can contact me to talk business or just say hi.
+										.col-md-1
+										button.col-md-2.btn.btn-secondary(type='button', data-toggle='modal', data-target='#myModal')
+											i.mdi.mdi-contact-mail
+											| Contact Me
+		// END SECTION D
+		// SECTION E: Blog
+		section#blog.section-e.col-md-12.waypoint
+			.container
+				#blogPosts.row
+					#blogHeader.top-buffer.text-center.skill-header.col-md-12
+						h2  Latest Blog Posts 
+				.row.visit-blog.top-buffer
+					include ./partials/blog
+					.col-md-3
+					.col-md-6.bottom-buffer(data-aos='fade-up')
+						a.btn.btn-block.btn-secondary(href='/blog')
+							i.mdi.mdi-wordpress
+							|  Visit 
+							strong  my blog 
+							|  and read more
+					.col-md-3
+		// SECTION F: Gists
+		section#gists.waypoint.section-f.col-md-12
+			.container
+				.row.bottom-buffer
+					.top-buffer.text-center.skill-header.col-md-12
+						h2  My Featured Gists 
+					.my-gist.col-md-6.top-buffer(data-aos='fade-up')
+						p.codepen(data-height='353', data-theme-id='dark', data-slug-hash='rmJNqO', data-default-tab='css', data-user='ysharaf', data-embed-version='2', data-pen-title='rmJNqO')
+							| See the Pen 
+							a(href='https://codepen.io/ysharaf/pen/rmJNqO/') rmJNqO
+							|  by Yamen Sharaf (
+							a(href='http://codepen.io/ysharaf') @ysharaf
+							| ) on 
+							a(href='http://codepen.io') CodePen
+							| .
+					.my-gist.col-md-6.top-buffer(data-aos='fade-up')
+						p.codepen(data-height='353', data-theme-id='dark', data-slug-hash='VbQYYQ', data-default-tab='js', data-user='ysharaf', data-embed-version='2', data-pen-title='Spinner Show/Hide Template')
+							| See the Pen 
+							a(href='https://codepen.io/ysharaf/pen/VbQYYQ/') Spinner Show/Hide Template
+							|  by Yamen Sharaf (
+							a(href='http://codepen.io/ysharaf') @ysharaf
+							| ) on 
+							a(href='http://codepen.io') CodePen
+							| .
+						script(async='', src='https://production-assets.codepen.io/assets/embed/ei.js')
+					.my-gist.col-md-12.top-buffer.bottom-buffer(data-aos='fade-up')
+						p.codepen(data-height='353', data-theme-id='dark', data-slug-hash='xdjxwB', data-default-tab='js,result', data-user='ysharaf', data-embed-version='2', data-pen-title='Map and Filter with React props')
+							| See the Pen 
+							a(href='http://codepen.io/ysharaf/pen/xdjxwB/') Map and Filter with React props
+							|  by Yamen Sharaf (
+							a(href='http://codepen.io/ysharaf') @ysharaf
+							| ) on 
+							a(href='http://codepen.io') CodePen
+							| .
+		// FOOTER
+		section.footer.col-md-12
+			.row
+				.col-md-6.about-social.top-buffer.bottom-buffer
+					ul.text-center
+						li
+							a(href='https://www.facebook.com/YamenSharaf')
+								i.mdi.mdi-facebook
+						li
+							a(href='https://twitter.com/YamenSharaf')
+								i.mdi.mdi-twitter
+						li
+							a(href='https://www.linkedin.com/in/yamensharaf/')
+								i.mdi.mdi-linkedin
+						li
+							a(href='https://github.com/YamenSharaf')
+								i.mdi.mdi-github-circle
+						li
+							a(href='tel:+20-111-104-6486')
+								i.mdi.mdi-phone
+						li
+							a(href="https://api.whatsapp.com/send?phone=201111046486&text=Hi%20I'm%20coming%20from%20the%20web")
+								i.mdi.mdi-whatsapp
+						li
+							a(href='https://m.me/YamenSharaf')
+								i.mdi.mdi-facebook-messenger
+				.col-md-2
+				.col-md-3.top-buffer.bottom-buffer
+					p
+						| © 2017 Copyright: 
+						a(href='https://yamensharaf.tk')  yamensharaf.tk 
+		// CONTACT MODAL
+		#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+			.modal-dialog(role='document')
+				// Content
+				.modal-content
+					// Header
+					.modal-header
+						h4#myModalLabel.modal-title.w-100.text-left
+							i.mdi.mdi-contact-mail
+							| Get in touch
+						button.btn.btn-secondary(type='button', data-dismiss='modal')
+							i.mdi.mdi-close
+					// Body
+					.modal-body
+						form#contactForm(name='sentMessage', novalidate='')
+							.row.control-group
+								.col-md-12
+									.form-group.md-form
+										i.mdi.mdi-account.prefix
+										input#name.form-control(type='text', required='', data-validation-required-message='Please enter your name.')
+										label(for='name') Your name
+										p.help-block.text-danger
+							.row.control-group
+								.col-md-12
+									.form-group.md-form
+										i.mdi.mdi-mail-ru.prefix
+										input#email.form-control(type='email', required='', data-validation-required-message='Please enter your email address.')
+										label(for='form2') Your email
+										p.help-block.text-danger
+							.row.control-group
+								.col-md-12
+									.form-group.md-form
+										i.mdi.mdi-phone.prefix
+										input#phone.form-control(type='tel', required='', data-validation-required-message='Please enter your phone number.')
+										label(for='form2') Your phone number
+										p.help-block.text-danger
+							.row.control-group
+								.col-md-12
+									.form-group.md-form
+										i.mdi.mdi-message.prefix
+										textarea#message.form-control.md-textarea(required='', data-validation-required-message='Please enter a message.')
+										label(for='form2') What's on your mind?
+										p.help-block.text-danger
+							br
+							#success
+							.row
+								.col-md-8
+								.col-md-4.form-group
+									button.btn.btn-secondary(type='submit')
+										i.mdi.mdi-send
+										|  Send
+					// Footer
+					.modal-footer
+						.container.col-md-12
+							.row
+								.col-md-7
+									p
+										| Not a fan of email? Surely there are other ways
+								.col-md-5
+									.about-social
+										ul.text-right
+											li
+												a(href='tel:+20-111-104-6486')
+													i.mdi.mdi-phone
+											li
+												a(href='https://m.me/YamenSharaf')
+													i.mdi.mdi-facebook-messenger
+											li
+												a(href="https://api.whatsapp.com/send?phone=201111046486&text=Hi%20I'm%20coming%20from%20the%20web")
+													i.mdi.mdi-whatsapp
+				// /.Content
+		// END MODAL
+		// Scripts Import
+		include ./partials/scripts
