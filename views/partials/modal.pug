@@ -1,0 +1,72 @@
+// CONTACT MODAL
+#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+	.modal-dialog(role='document')
+		// Content
+		.modal-content
+			// Header
+			.modal-header
+				h4#myModalLabel.modal-title.w-100.text-left
+					i.mdi.mdi-contact-mail
+					| Get in touch
+				button.btn.btn-secondary(type='button', data-dismiss='modal')
+					i.mdi.mdi-close
+			// Body
+			.modal-body
+				form#contactForm(name='sentMessage', novalidate='')
+					.row.control-group
+						.col-md-12
+							.form-group.md-form
+								i.mdi.mdi-account.prefix
+								input#name.form-control(type='text', required='', data-validation-required-message='Please enter your name.')
+								label(for='name') Your name
+								p.help-block.text-danger
+					.row.control-group
+						.col-md-12
+							.form-group.md-form
+								i.mdi.mdi-mail-ru.prefix
+								input#email.form-control(type='email', required='', data-validation-required-message='Please enter your email address.')
+								label(for='form2') Your email
+								p.help-block.text-danger
+					.row.control-group
+						.col-md-12
+							.form-group.md-form
+								i.mdi.mdi-phone.prefix
+								input#phone.form-control(type='tel', required='', data-validation-required-message='Please enter your phone number.')
+								label(for='form2') Your phone number
+								p.help-block.text-danger
+					.row.control-group
+						.col-md-12
+							.form-group.md-form
+								i.mdi.mdi-message.prefix
+								textarea#message.form-control.md-textarea(required='', data-validation-required-message='Please enter a message.')
+								label(for='form2') What's on your mind?
+								p.help-block.text-danger
+					br
+					#success
+					.row
+						.col-md-8
+						.col-md-4.form-group
+							button.btn.btn-secondary(type='submit')
+								i.mdi.mdi-send
+								|  Send
+			// Footer
+			.modal-footer
+				.container.col-md-12
+					.row
+						.col-md-7
+							p
+								| Not a fan of email? Surely there are other ways
+						.col-md-5
+							.about-social
+								ul.text-right
+									li
+										a(href='tel:+20-111-104-6486')
+											i.mdi.mdi-phone
+									li
+										a(href='https://m.me/YamenSharaf')
+											i.mdi.mdi-facebook-messenger
+									li
+										a(href="https://api.whatsapp.com/send?phone=201111046486&text=Hi%20I'm%20coming%20from%20the%20web")
+											i.mdi.mdi-whatsapp
+		// /.Content
+// END MODAL

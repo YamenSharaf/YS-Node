@@ -1,19 +1,16 @@
-each post in blog
-	-	let title = post.title;
-	-	let thumbnail = post.thumbnail_images.medium_large.url;
-	-	let link = post.url;
-	.col-md-4.bottom-buffer
-		// Card
-		.card.card-cascade.narrower.top-buffer(data-aos='fade-up')
-			// Card image
-			.view.overlay.hm-white-slight
-				img.img-fluid(src= thumbnail, alt= 'Cover image for' + title)
-				a(target='_blank', href= link)
-					.mask.waves-effect.waves-light
-			// Card content
-			.card-block
-				a(target='_blank', href= link)
-					h5.card-text
-						i.mdi.mdi-bookmark-outline
-						|  #{title}
-			// /.Card
+section#blog.section-e.col-md-12.waypoint
+	.container
+		#blogPosts.row
+			#blogHeader.top-buffer.text-center.skill-header.col-md-12
+				h2  Latest Blog Posts 
+		.row.visit-blog.top-buffer
+			//Include blog posts
+			include ./../partials/blogPosts
+			.col-md-3
+			.col-md-6.bottom-buffer(data-aos='fade-up')
+				a.btn.btn-block.btn-secondary(href='/blog')
+					i.mdi.mdi-wordpress
+					|  Visit 
+					strong  my blog 
+					|  and read more
+			.col-md-3

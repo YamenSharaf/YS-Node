@@ -1,0 +1,19 @@
+each post in blog
+	-	let title = post.title;
+	-	let thumbnail = post.thumbnail_images.medium_large.url;
+	-	let link = post.url;
+	.col-md-4.bottom-buffer
+		// Card
+		.card.card-cascade.narrower.top-buffer(data-aos='fade-up')
+			// Card image
+			.view.overlay.hm-white-slight
+				img.img-fluid(src= thumbnail, alt= 'Cover image for' + title)
+				a(target='_blank', href= link)
+					.mask.waves-effect.waves-light
+			// Card content
+			.card-block
+				a(target='_blank', href= link)
+					h5.card-text
+						i.mdi.mdi-bookmark-outline
+						|  #{title}
+			// /.Card
